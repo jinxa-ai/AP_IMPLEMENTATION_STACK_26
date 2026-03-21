@@ -1,0 +1,41 @@
+<svg width="120" height="120" viewBox="0 0 200 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#94a3b8" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left hand palm -->
+    <path d="M28 118 C22 112 22 106 22 100 L22 88 C22 82 26 78 32 78 L62 78 C68 78 72 80 76 84 L100 108"/>
+    <!-- Right hand palm -->
+    <path d="M172 118 C178 112 178 106 178 100 L178 88 C178 82 174 78 168 78 L138 78 C132 78 128 80 124 84 L100 108"/>
+    <!-- Left fingers -->
+    <path d="M28 118 C28 118 24 122 26 126 C28 130 34 132 38 130 L66 118"/>
+    <path d="M38 130 C36 134 34 138 38 142 C42 146 48 144 52 140 L72 126"/>
+    <path d="M52 140 C50 144 48 148 52 152 C56 155 62 153 66 148 L80 134"/>
+    <path d="M66 148 C64 152 64 156 68 158 C72 160 78 158 82 152"/>
+    <!-- Right fingers (under left hand) -->
+    <path d="M172 118 C172 118 176 122 174 126 C172 130 166 132 162 130 L134 118"/>
+    <path d="M162 130 C164 134 166 138 162 142 C158 146 152 144 148 140 L128 126"/>
+    <path d="M148 140 C150 144 152 148 148 152 C144 155 138 153 134 148 L120 134"/>
+    <path d="M134 148 C136 152 136 156 132 158 C128 160 122 158 118 152"/>
+    <!-- Left circuit branch -->
+    <line x1="42" y1="58" x2="42" y2="74"/>
+    <circle cx="42" cy="54" r="4"/>
+    <line x1="28" y1="50" x2="36" y2="64"/>
+    <circle cx="25" cy="46" r="3.5"/>
+    <line x1="56" y1="50" x2="48" y2="64"/>
+    <circle cx="59" cy="46" r="3.5"/>
+    <line x1="16" y1="58" x2="30" y2="68"/>
+    <circle cx="13" cy="56" r="3"/>
+    <line x1="68" y1="58" x2="54" y2="68"/>
+    <circle cx="71" cy="56" r="3"/>
+    <!-- Right circuit branch -->
+    <line x1="158" y1="58" x2="158" y2="74"/>
+    <circle cx="158" cy="54" r="4"/>
+    <line x1="144" y1="50" x2="152" y2="64"/>
+    <circle cx="141" cy="46" r="3.5"/>
+    <line x1="172" y1="50" x2="164" y2="64"/>
+    <circle cx="175" cy="46" r="3.5"/>
+    <line x1="132" y1="58" x2="146" y2="68"/>
+    <circle cx="129" cy="56" r="3"/>
+    <line x1="184" y1="58" x2="170" y2="68"/>
+    <circle cx="187" cy="56" r="3"/>
+  </g>
+  <text x="100" y="195" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="30" text-anchor="middle" letter-spacing="1">Jinxa</text>
+</svg>
