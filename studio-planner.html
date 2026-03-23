@@ -214,11 +214,11 @@
 <div class="hero">
   <div class="hero-badge"><div class="hero-dot"></div> Développement par Tom Randeau</div>
   <h1>Studio Planner</h1>
-  <p class="hero-sub">Application Planning Studio · Artistic Palace<br>Dernière mise à jour : 20 mars 2026</p>
+  <p class="hero-sub">Application Planning Studio · Artistic Palace<br>Dernière mise à jour : 23 mars 2026</p>
   <div class="hero-stats">
     <div class="hero-stat"><div class="hero-stat-num">11</div><div class="hero-stat-label">Terminées</div></div>
     <div class="hero-stat"><div class="hero-stat-num">21</div><div class="hero-stat-label">Phases totales</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">196</div><div class="hero-stat-label">Tests auto</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">218</div><div class="hero-stat-label">Tests auto</div></div>
     <div class="hero-stat"><div class="hero-stat-num">52%</div><div class="hero-stat-label">Avancement</div></div>
   </div>
   <div class="progress-wrap">
@@ -501,7 +501,8 @@
           <div class="phase-id">PHASE 11</div>
           <div class="phase-name">Réservations récurrentes</div>
         </div>
-        <span class="phase-date">En préparation</span>
+        <span class="phase-date">En cours</span>
+        <span class="phase-tests">218 tests</span>
         <span class="chevron">▼</span>
       </div>
       <div class="phase-detail">
@@ -509,6 +510,8 @@
           <ul>
             <li>Création d'une seule réservation récurrente (hebdo, bimensuelle, mensuelle)</li>
             <li>Chaque occurrence modifiable ou annulable individuellement</li>
+            <li><strong>Fondation livrée (23 mars) :</strong> types, schéma DB (recurrence_rules + occurrence_overrides), 4 fonctions pures + 22 tests</li>
+            <li>Reste : intégration serveur, router bookings avec editScope, composants UI</li>
           </ul>
         </div>
       </div>
@@ -598,15 +601,16 @@
           <div class="phase-id">PHASE 18</div>
           <div class="phase-name">Activation HubSpot CRM</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">En préparation</span>
         <span class="chevron">▼</span>
       </div>
       <div class="phase-detail">
         <div class="phase-desc">
           <ul>
             <li>Credentials HubSpot fournis par Mahaut ✓</li>
-            <li>Toutes les fonctionnalités testées sur l'adaptateur de développement</li>
-            <li>Intégration CRM à lancer</li>
+            <li>Adaptateur HubSpot corrigé et étendu (23 mars) : champs Phase 8 (droit à l'image, payeur) + bug fix statut</li>
+            <li>Script de configuration schema HubSpot mis à jour (nouveaux statuts, nouveaux champs)</li>
+            <li>Prochaine étape : créer la Private App + tester CRUD réel</li>
           </ul>
         </div>
       </div>
