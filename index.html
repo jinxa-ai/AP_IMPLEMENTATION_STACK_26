@@ -114,6 +114,16 @@
   .badge-omni { background: #a855f722; color: #a855f7; border: 1px solid #a855f744; }
   .badge-planning { background: #22c55e22; color: #22c55e; border: 1px solid #22c55e44; }
   .badge-inventaire { background: #ef444422; color: #ef4444; border: 1px solid #ef444444; }
+  .assignee {
+    font-size: 9px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 3px; white-space: nowrap; font-family: monospace;
+  }
+  .assignee-lg { background: #a855f718; color: #a855f7; }
+  .assignee-md { background: #f9731618; color: #f97316; }
+  .assignee-si { background: #22c55e18; color: #22c55e; }
+  .assignee-pg { background: #ef444418; color: #ef4444; }
+  .assignee-tr { background: #7c3aed18; color: #7c3aed; }
+  .assignee-ap { background: #64748b18; color: #94a3b8; }
   .chevron {
     color: #475569; font-size: 11px; flex-shrink: 0;
     margin-top: 4px; transition: transform .2s; user-select: none;
@@ -250,6 +260,7 @@
             <span class="task-title">Finaliser la matrice de priorisation (impact vs effort)</span>
           </div>
           <span class="badge badge-crm">CRM — Cadrage</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -273,6 +284,9 @@
             <span class="task-title">Rédiger le cahier des charges fonctionnel et technique</span>
           </div>
           <span class="badge badge-crm">CRM — Besoins</span>
+          <span class="assignee assignee-lg">Leslie</span>
+          <span class="assignee assignee-md">Mahaut</span>
+          <span class="assignee assignee-si">Stéphane</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -296,6 +310,8 @@
             <span class="task-title">Créer la matrice des règles de gestion par espace</span>
           </div>
           <span class="badge badge-planning">Planning Op — Espaces</span>
+          <span class="assignee assignee-si">Stéphane</span>
+          <span class="assignee assignee-md">Mahaut</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -319,6 +335,7 @@
             <span class="task-title">Envoyer l'inventaire simplifié des équipements des 15 espaces</span>
           </div>
           <span class="badge badge-inventaire">Inventaire — Équipements</span>
+          <span class="assignee assignee-ap">Artistic Palace</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -342,6 +359,7 @@
             <span class="task-title">Envoyer ~20 fiches contacts enrichies pour démarrer le paramétrage</span>
           </div>
           <span class="badge badge-crm">CRM — Migration</span>
+          <span class="assignee assignee-ap">Artistic Palace</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -376,6 +394,7 @@
             <span class="task-title">Modéliser l'architecture des données CRM</span>
           </div>
           <span class="badge badge-crm">CRM — Architecture</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -399,6 +418,7 @@
             <span class="task-title">Configurer les pipelines commerciaux</span>
           </div>
           <span class="badge badge-crm">CRM — Pipeline</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -422,6 +442,7 @@
             <span class="task-title">Créer les workflows automatisés</span>
           </div>
           <span class="badge badge-crm">CRM — Workflows</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-tr">Tom</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -446,6 +467,7 @@
             <span class="task-title">Configurer le planning multi-espaces (Studio Planner)</span>
           </div>
           <span class="badge badge-planning">Planning Op — Studio Planner</span>
+          <span class="assignee assignee-tr">Tom</span> <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -469,6 +491,7 @@
             <span class="task-title">Paramétrer l'espace événementiel dans le planning</span>
           </div>
           <span class="badge badge-planning">Planning Op — Événementiel</span>
+          <span class="assignee assignee-tr">Tom</span> <span class="assignee assignee-md">Mahaut</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -492,6 +515,7 @@
             <span class="task-title">Configurer les droits d'accès par profil utilisateur</span>
           </div>
           <span class="badge badge-crm">CRM — Sécurité</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -524,7 +548,8 @@
             <span class="task-id">S3-1</span>
             <span class="task-title">Nettoyer et dédoublonner les données existantes</span>
           </div>
-          <span class="badge badge-crm">CRM — Migration</span> <span class="status status-wip">En cours (Mahaut)</span>
+          <span class="badge badge-crm">CRM — Migration</span> <span class="status status-wip">En cours</span>
+          <span class="assignee assignee-md">Mahaut</span> <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -548,6 +573,7 @@
             <span class="task-title">Importer les données par lots dans HubSpot</span>
           </div>
           <span class="badge badge-crm">CRM — Migration</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -594,6 +620,7 @@
             <span class="task-title">Intégrer les canaux de réservation (réseaux sociaux, email, Aircall, WhatsApp)</span>
           </div>
           <span class="badge badge-planning">Planning Op — Intégrations</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-si">Stéphane</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -629,6 +656,7 @@
             <span class="task-title">Connecter la boîte email d'équipe à HubSpot</span>
           </div>
           <span class="badge badge-omni">Omnicanal — Email</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -652,6 +680,7 @@
             <span class="task-title">Connecter WhatsApp Business à HubSpot</span>
           </div>
           <span class="badge badge-omni">Omnicanal — WhatsApp</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -675,6 +704,7 @@
             <span class="task-title">Installer et configurer Aircall</span>
           </div>
           <span class="badge badge-omni">Omnicanal — Aircall</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -698,6 +728,7 @@
             <span class="task-title">Unifier la boîte de réception omnicanale</span>
           </div>
           <span class="badge badge-omni">Omnicanal — Inbox</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-si">Stéphane</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -721,6 +752,7 @@
             <span class="task-title">Définir les SLA par canal</span>
           </div>
           <span class="badge badge-omni">Omnicanal — SLA</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-pg">Pierre</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -777,6 +809,7 @@
             <span class="task-title">Exécuter les tests utilisateurs (UAT)</span>
           </div>
           <span class="badge badge-crm">CRM — Recette</span>
+          <span class="assignee assignee-md">Mahaut</span> <span class="assignee assignee-si">Stéphane</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -823,6 +856,7 @@
             <span class="task-title">Former les équipes par profil</span>
           </div>
           <span class="badge badge-crm">CRM — Formation</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -869,6 +903,7 @@
             <span class="task-title">Valider l'inventaire simplifié et l'intégrer dans Studio Planner</span>
           </div>
           <span class="badge badge-inventaire">Inventaire — Validation</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-tr">Tom</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -925,6 +960,7 @@
             <span class="task-title">Mise en production</span>
           </div>
           <span class="badge badge-crm">CRM — Go-Live</span>
+          <span class="assignee assignee-pg">Pierre</span> <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
@@ -948,6 +984,7 @@
             <span class="task-title">Support post-lancement J+1 à J+15</span>
           </div>
           <span class="badge badge-crm">CRM — Support</span>
+          <span class="assignee assignee-lg">Leslie</span>
         </div>
         <span class="chevron">▼</span>
       </div>
