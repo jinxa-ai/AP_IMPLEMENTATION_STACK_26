@@ -228,24 +228,32 @@
     padding-bottom: 10px; border-bottom: 1px solid #1e293b;
   }
   .milestone-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;
+    display: flex; flex-wrap: wrap; gap: 0; align-items: stretch; justify-content: center;
+  }
+  .milestone-step {
+    display: flex; align-items: center;
+  }
+  .milestone-arrow {
+    color: #334155; font-size: 24px; padding: 0 6px; flex-shrink: 0;
+    display: flex; align-items: center;
   }
   .milestone {
-    background: #111827; border: 1px solid #1e293b; border-radius: 8px;
-    padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start;
+    background: #111827; border: 1px solid #1e293b; border-radius: 12px;
+    padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
+    min-width: 260px; max-width: 320px; flex: 1;
   }
   .milestone-icon {
-    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
+    font-size: 18px;
   }
   .milestone-content { flex: 1; }
   .milestone-date {
-    font-size: 10px; font-family: monospace; color: #475569;
-    text-transform: uppercase; letter-spacing: .1em; margin-bottom: 2px;
+    font-size: 11px; font-family: monospace; color: #475569;
+    text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px;
   }
-  .milestone-title { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
-  .milestone-who { font-size: 11px; color: #475569; }
+  .milestone-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .milestone-who { font-size: 12px; color: #475569; }
 
   /* RACI */
   .raci { margin-bottom: 40px; }
@@ -284,16 +292,17 @@
     font-size: 16px; font-weight: 400; margin-bottom: 16px;
     padding-bottom: 10px; border-bottom: 1px solid #1e293b;
   }
-  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .gov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
   .gov-card {
-    background: #111827; border: 1px solid #1e293b; border-radius: 8px;
-    padding: 16px;
+    background: #111827; border: 1px solid #1e293b; border-radius: 10px;
+    padding: 22px 24px;
   }
-  .gov-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
-  .gov-detail { font-size: 12px; color: #64748b; line-height: 1.6; }
+  .gov-title { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+  .gov-detail { font-size: 14px; color: #94a3b8; line-height: 1.8; }
   .gov-freq {
-    font-size: 10px; font-family: monospace; color: #a855f7;
-    text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px;
+    font-size: 12px; font-family: monospace; color: #a855f7;
+    text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px;
+    font-weight: 600;
   }
 
   /* Footer */
@@ -594,52 +603,69 @@
   <div class="section fade-in">
     <div class="section-title"><span class="section-num">03</span> Jalons clés</div>
     <div class="milestone-grid">
-      <div class="milestone" style="opacity:0.4">
-        <div class="milestone-icon" style="background:#ef444422;color:#ef4444">✓</div>
-        <div class="milestone-content">
-          <div class="milestone-date" style="text-decoration:line-through">Fin Mars — S4</div>
-          <div class="milestone-title" style="text-decoration:line-through">Cahier des charges validé</div>
-          <div class="milestone-who">Pierre Guimard valide · Leslie livre</div>
+      <div class="milestone-step">
+        <div class="milestone" style="opacity:0.4">
+          <div class="milestone-icon" style="background:#ef444422;color:#ef4444">✓</div>
+          <div class="milestone-content">
+            <div class="milestone-date" style="text-decoration:line-through">Fin Mars — S4</div>
+            <div class="milestone-title" style="text-decoration:line-through">Cahier des charges validé</div>
+            <div class="milestone-who">Pierre Guimard valide · Leslie livre</div>
+          </div>
         </div>
+        <div class="milestone-arrow">→</div>
       </div>
-      <div class="milestone" style="border-color:#a855f7;box-shadow:0 0 12px #a855f733">
-        <div class="milestone-icon" style="background:#a855f722;color:#a855f7;animation:progressPulse 2s infinite">◆</div>
-        <div class="milestone-content">
-          <div class="milestone-date">Fin Avril — S8</div>
-          <div class="milestone-title">CRM paramétré + données migrées</div>
-          <div class="milestone-who">Leslie + Mahaut valident les données</div>
+      <div class="milestone-step">
+        <div class="milestone" style="border-color:#a855f7;box-shadow:0 0 12px #a855f733">
+          <div class="milestone-icon" style="background:#a855f722;color:#a855f7;animation:progressPulse 2s infinite">◆</div>
+          <div class="milestone-content">
+            <div class="milestone-date">Fin Avril — S8</div>
+            <div class="milestone-title">CRM paramétré + données migrées</div>
+            <div class="milestone-who">Leslie + Mahaut valident les données</div>
+          </div>
         </div>
+        <div class="milestone-arrow">→</div>
       </div>
-      <div class="milestone">
-        <div class="milestone-icon" style="background:#22c55e22;color:#22c55e">◆</div>
-        <div class="milestone-content">
-          <div class="milestone-date">Mi-Mai — S10</div>
-          <div class="milestone-title">Omnicanal opérationnel</div>
-          <div class="milestone-who">Email + WhatsApp + Aircall connectés</div>
+      <div class="milestone-step">
+        <div class="milestone">
+          <div class="milestone-icon" style="background:#22c55e22;color:#22c55e">◆</div>
+          <div class="milestone-content">
+            <div class="milestone-date">Mi-Mai — S10</div>
+            <div class="milestone-title">Omnicanal opérationnel</div>
+            <div class="milestone-who">Email + WhatsApp + Aircall connectés</div>
+          </div>
         </div>
+        <div class="milestone-arrow">→</div>
       </div>
-      <div class="milestone">
-        <div class="milestone-icon" style="background:#f9731622;color:#f97316">◆</div>
-        <div class="milestone-content">
-          <div class="milestone-date">Fin Mai — S14</div>
-          <div class="milestone-title">Go / No-Go</div>
-          <div class="milestone-who">Comité de pilotage · Décision Pierre</div>
+      <div class="milestone-step">
+        <div class="milestone">
+          <div class="milestone-icon" style="background:#f9731622;color:#f97316">◆</div>
+          <div class="milestone-content">
+            <div class="milestone-date">Fin Mai — S14</div>
+            <div class="milestone-title">Go / No-Go</div>
+            <div class="milestone-who">Comité de pilotage · Décision Pierre</div>
+          </div>
         </div>
+        <div class="milestone-arrow">→</div>
       </div>
-      <div class="milestone">
-        <div class="milestone-icon" style="background:#a855f722;color:#a855f7">◆</div>
-        <div class="milestone-content">
-          <div class="milestone-date">Début Juin — S15</div>
-          <div class="milestone-title">Mise en production</div>
-          <div class="milestone-who">Toute l'équipe · Support Leslie J+15</div>
+      <div class="milestone-step">
+        <div class="milestone">
+          <div class="milestone-icon" style="background:#a855f722;color:#a855f7">◆</div>
+          <div class="milestone-content">
+            <div class="milestone-date">Début Juin — S15</div>
+            <div class="milestone-title">Mise en production</div>
+            <div class="milestone-who">Toute l'équipe · Support Leslie J+15</div>
+          </div>
         </div>
+        <div class="milestone-arrow">→</div>
       </div>
-      <div class="milestone">
-        <div class="milestone-icon" style="background:#7c3aed22;color:#7c3aed">◆</div>
-        <div class="milestone-content">
-          <div class="milestone-date">Fin Juin — S18</div>
-          <div class="milestone-title">Fin de phase projet</div>
-          <div class="milestone-who">Bascule vers suivi continu (option)</div>
+      <div class="milestone-step">
+        <div class="milestone">
+          <div class="milestone-icon" style="background:#7c3aed22;color:#7c3aed">◆</div>
+          <div class="milestone-content">
+            <div class="milestone-date">Fin Juin — S18</div>
+            <div class="milestone-title">Fin de phase projet</div>
+            <div class="milestone-who">Bascule vers suivi continu (option)</div>
+          </div>
         </div>
       </div>
     </div>
