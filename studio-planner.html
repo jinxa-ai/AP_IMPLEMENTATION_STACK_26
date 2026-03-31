@@ -104,6 +104,15 @@
     letter-spacing: .1em;
   }
 
+  /* Sprint heading */
+  .sprint-heading {
+    font-size: 13px; font-family: monospace; color: #7c3aed;
+    margin: 20px 0 10px; padding: 8px 12px;
+    background: #7c3aed08; border-left: 2px solid #7c3aed33;
+    border-radius: 0 6px 6px 0;
+  }
+  .sprint-heading:first-child { margin-top: 0; }
+
   /* Phase card */
   .phase {
     background: #111827;
@@ -167,7 +176,7 @@
     padding-left: 16px; position: relative; margin-bottom: 4px;
   }
   .phase-desc li::before {
-    content: '→'; position: absolute; left: 0; color: #7c3aed; font-size: 12px;
+    content: '\2192'; position: absolute; left: 0; color: #7c3aed; font-size: 12px;
   }
 
   /* Alert box */
@@ -214,16 +223,16 @@
 <div class="hero">
   <div class="hero-badge"><div class="hero-dot"></div> Développement par Tom Randeau</div>
   <h1>Studio Planner</h1>
-  <p class="hero-sub">Application Planning Studio · Artistic Palace<br>Dernière mise à jour : 20 mars 2026</p>
+  <p class="hero-sub">Application Planning Studio · Artistic Palace<br>Dernière mise à jour : 26 mars 2026</p>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="hero-stat-num">11</div><div class="hero-stat-label">Terminées</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">21</div><div class="hero-stat-label">Phases totales</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">196</div><div class="hero-stat-label">Tests auto</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">52%</div><div class="hero-stat-label">Avancement</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">28</div><div class="hero-stat-label">Terminées</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">33</div><div class="hero-stat-label">Phases totales</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">278</div><div class="hero-stat-label">Tests auto</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">85%</div><div class="hero-stat-label">Avancement</div></div>
   </div>
   <div class="progress-wrap">
-    <div class="progress-label"><span>Progression globale</span><span>11 / 21</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:52%"></div></div>
+    <div class="progress-label"><span>Progression globale</span><span>28 / 33</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
   </div>
   <div style="margin-top:20px">
     <a href="https://demo-planning.vercel.app/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:linear-gradient(135deg,#7c3aed,#a855f7);color:white;text-decoration:none;font-size:14px;font-weight:600;border-radius:8px;letter-spacing:.03em;transition:all .2s;box-shadow:0 0 20px #a855f744" onmouseover="this.style.boxShadow='0 0 30px #a855f766';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 0 20px #a855f744';this.style.transform='translateY(0)'">
@@ -250,9 +259,46 @@
     </div>
   </div>
 
-  <!-- PHASES TERMINÉES -->
+  <!-- JOURNAL -->
   <div class="section fade-in">
-    <div class="section-title"><span class="section-num">01</span> Phases terminées (11/21)</div>
+    <div class="section-title"><span class="section-num">00</span> Journal de bord</div>
+
+    <div class="alert">
+      <div class="alert-icon">📋</div>
+      <div class="alert-content">
+        <div class="alert-title">26 mars 2026 (suite)</div>
+        <div class="alert-text">Sprint 3 terminé — Phase 15e (agent de sécurité RDC + alertes ménage, 12 tests) et Phase 15f (heures réelles ingénieurs, 12 tests). 278 tests au total. Déployé et vérifié.</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="alert-icon">🔧</div>
+      <div class="alert-content">
+        <div class="alert-title">26 mars 2026</div>
+        <div class="alert-text">Audit complet de l'application déployée. 6 chaînes de données cassées identifiées et corrigées (statut réservation, split RDC, notifications, récurrence, ressources). UX polish : vue grille semaine par défaut, noms ingénieurs, sélecteur de statut, 20 réservations démo. Déploiement Vercel corrigé (Edge Runtime middleware fix). Playwright E2E tests en place.</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="alert-icon">📞</div>
+      <div class="alert-content">
+        <div class="alert-title">24 mars 2026</div>
+        <div class="alert-text">Suite à l'appel #2 du 23 mars avec Leslie, Mahaut et Stéphane, 16 nouvelles exigences intégrées au plan. Réorganisation en 7 sprints hebdomadaires. Plan passe à 33 phases (vs 27).</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="alert-icon">📝</div>
+      <div class="alert-content">
+        <div class="alert-title">23 mars 2026</div>
+        <div class="alert-text">Analyse complète du cahier des charges et du transcript de l'appel du 16 mars. 34 points de vérification identifiés.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASES TERMINÉES — FONDATIONS -->
+  <div class="section fade-in">
+    <div class="section-title"><span class="section-num">01</span> Phases terminées — Fondations (28/33)</div>
 
     <div class="phase completed" onclick="togglePhase(this)">
       <div class="phase-header">
@@ -290,7 +336,6 @@
           <ul>
             <li>Le serveur bloque automatiquement les conflits horaires</li>
             <li>API opérationnelle : créer, modifier, supprimer, déplacer une session</li>
-            <li>33 tests automatisés en place</li>
           </ul>
         </div>
       </div>
@@ -332,7 +377,6 @@
           <ul>
             <li>Interface reflète la réalité en direct via l'API</li>
             <li>Chatbot détecte conflits, affiche statistiques, vérifie disponibilités</li>
-            <li>87 tests automatisés</li>
           </ul>
         </div>
       </div>
@@ -352,10 +396,9 @@
       <div class="phase-detail">
         <div class="phase-desc">
           <ul>
-            <li>Deux rôles : Admin et Ingénieur</li>
-            <li>Page d'administration pour gérer les utilisateurs</li>
-            <li>Système flexible avec fallback sur variables d'environnement</li>
-            <li>Protégé par feature flag · 126 tests</li>
+            <li>Deux rôles : Admin (accès complet) et Ingénieur (accès restreint)</li>
+            <li>Page d'administration pour créer, modifier et supprimer des utilisateurs</li>
+            <li>Protégé par feature flag FEATURE_USER_ROLES</li>
           </ul>
         </div>
       </div>
@@ -377,7 +420,7 @@
           <ul>
             <li>Zéro vulnérabilité npm, TypeScript strict, aucune fuite</li>
             <li>Messages d'erreur clairs pour les mutations admin</li>
-            <li>Page d'erreur isolée pour /admin</li>
+            <li>Composant principal allégé de 554 à 324 lignes</li>
           </ul>
         </div>
       </div>
@@ -398,7 +441,6 @@
           <ul>
             <li>Navigation quasi-instantanée grâce au prefetch</li>
             <li>Planning se rafraîchit toutes les 60 secondes</li>
-            <li>Aucun appel API supplémentaire</li>
           </ul>
         </div>
       </div>
@@ -421,7 +463,6 @@
             <li>Nouveaux statuts : « Maison », « No-show », « Option » avec codes couleur</li>
             <li>Nouveaux rôles : « Booker » et « Consultation »</li>
             <li>Champs : « Droit à l'image », distinction artiste/payeur</li>
-            <li>160 tests automatisés</li>
           </ul>
         </div>
       </div>
@@ -465,8 +506,99 @@
           <ul>
             <li>Vercel Postgres enregistrant l'historique complet</li>
             <li>Chaque création, modification, annulation tracée</li>
-            <li>Historique consultable depuis le détail d'une réservation</li>
-            <li>Feature flag FEATURE_AUDIT_TRAIL · 173 tests</li>
+            <li>Feature flag FEATURE_AUDIT_TRAIL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 11</div>
+          <div class="phase-name">Réservations récurrentes</div>
+        </div>
+        <span class="phase-date">23 Mars 2026</span>
+        <span class="phase-tests">222 tests</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Récurrence hebdomadaire, bihebdomadaire, mensuelle</li>
+            <li>Modification possible : une occurrence, toutes les suivantes, ou la série entière</li>
+            <li>Annulation individuelle sans affecter les autres</li>
+            <li>Feature flag FEATURE_RECURRING_BOOKINGS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 12</div>
+          <div class="phase-name">Multi-ressources par session</div>
+        </div>
+        <span class="phase-date">23 Mars 2026</span>
+        <span class="phase-tests">232 tests</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Trois rôles : ingénieur principal, assistant, stagiaire</li>
+            <li>Horaires indépendants par personne</li>
+            <li>Détection automatique des conflits de ressources</li>
+            <li>Feature flag FEATURE_MULTI_RESOURCE</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 13</div>
+          <div class="phase-name">Notifications automatiques</div>
+        </div>
+        <span class="phase-date">23 Mars 2026</span>
+        <span class="phase-tests">232 tests</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Email de confirmation automatique à la création</li>
+            <li>Templates : rappel 24h, pré-session (adresse, Wi-Fi, CGV), modification, annulation</li>
+            <li>File d'attente traitée par cron</li>
+            <li>Feature flag FEATURE_NOTIFICATIONS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 14</div>
+          <div class="phase-name">Système de débrief + pièces jointes</div>
+        </div>
+        <span class="phase-date">23 Mars 2026</span>
+        <span class="phase-tests">249 tests</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Notes de session par membre d'équipe</li>
+            <li>Débrief quotidien agrégé envoyé par email à 9h</li>
+            <li>Pièces jointes : PDF, images, fichiers texte (max 10 Mo, Vercel Blob)</li>
+            <li>Feature flags FEATURE_DEBRIEF + FEATURE_FILE_ATTACHMENTS</li>
           </ul>
         </div>
       </div>
@@ -489,108 +621,266 @@
             <li>Studio RDC (150 m²) géré en deux espaces : loft (100 m²) et cyclorama (50 m²)</li>
             <li>Réservables indépendamment, rétrocompatible</li>
             <li>Statut cyclorama gérable · Feature flag FEATURE_RDC_HYBRID</li>
-            <li>196 tests automatisés</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PROCHAINES PHASES -->
+  <!-- SPRINTS -->
   <div class="section fade-in">
-    <div class="section-title"><span class="section-num">02</span> Prochaines phases (10 restantes)</div>
+    <div class="section-title"><span class="section-num">02</span> Sprints hebdomadaires</div>
 
-    <div class="phase" onclick="togglePhase(this)">
+    <div class="sprint-heading">Sprint 1 — Démo critique (semaine du 23 mars)</div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-done">✓</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 11</div>
-          <div class="phase-name">Réservations récurrentes</div>
+          <div class="phase-id">PHASE 15B</div>
+          <div class="phase-name">Vue semaine complète (grille studios × jours)</div>
         </div>
-        <span class="phase-date">En préparation</span>
+        <span class="phase-date">24 Mars 2026</span>
+        <span class="phase-tests">250 tests</span>
         <span class="chevron">▼</span>
       </div>
       <div class="phase-detail">
         <div class="phase-desc">
           <ul>
-            <li>Création d'une seule réservation récurrente (hebdo, bimensuelle, mensuelle)</li>
-            <li>Chaque occurrence modifiable ou annulable individuellement</li>
+            <li>Vue matricielle tous studios × 7 jours, inspirée d'Easy Request</li>
+            <li>3 vues : Timeline (W), Grille semaine (G), Mois (M)</li>
+            <li>Clic carte = détail ; clic cellule vide = réservation pré-remplie</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="phase" onclick="togglePhase(this)">
+    <div class="phase completed" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-done">✓</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 12</div>
-          <div class="phase-name">Multi-ressources par session</div>
+          <div class="phase-id">PHASE 15C</div>
+          <div class="phase-name">Enrichissement cartes + UX (badges, statut, filtres)</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">24 Mars 2026</span>
+        <span class="phase-tests">250 tests</span>
         <span class="chevron">▼</span>
       </div>
       <div class="phase-detail">
         <div class="phase-desc">
           <ul>
-            <li>Assignation de plusieurs personnes à une session</li>
-            <li>Horaires indépendants par ressource</li>
+            <li>Statut « Terminée » exclu des conflits</li>
+            <li>Badge ingénieur visible sur les cartes</li>
+            <li>7 filtres par statut cliquables</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="phase" onclick="togglePhase(this)">
+    <div class="sprint-heading">Sprint 2 — Workflow de base (semaine du 30 mars)</div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-done">✓</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 13</div>
-          <div class="phase-name">Notifications et messages pré-session</div>
+          <div class="phase-id">PHASE 15D</div>
+          <div class="phase-name">Options superposables (2 options sur même créneau)</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">24 Mars 2026</span>
+        <span class="phase-tests">254 tests</span>
         <span class="chevron">▼</span>
       </div>
       <div class="phase-detail">
         <div class="phase-desc">
           <ul>
-            <li>Email de confirmation automatique</li>
-            <li>Rappel 24h avant la session</li>
-            <li>Message pré-session avec CGV, accès, codes Wi-Fi</li>
+            <li>Deux options sur même studio/horaire ne créent plus de conflit</li>
+            <li>Option sur créneau confirmé : avertissement non-bloquant</li>
+            <li>Confirmation d'option déclenche prompt d'annulation</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="phase" onclick="togglePhase(this)">
+    <div class="phase completed" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-done">✓</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 14</div>
-          <div class="phase-name">Système de débrief + pièces jointes</div>
+          <div class="phase-id">PHASE 13B</div>
+          <div class="phase-name">Notifications améliorées (rappel 2h, alertes modification)</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">24 Mars 2026</span>
+        <span class="phase-tests">254 tests</span>
         <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Alertes modification/suppression envoyées à Stéphane et Mahaut</li>
+            <li>Nouveaux types : rappel 2h, pré-session assistant, alertes staff</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="phase" onclick="togglePhase(this)">
+    <div class="sprint-heading">Sprint 3 — Opérations RDC (semaine du 6 avril)</div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 15E</div>
+          <div class="phase-name">Agent de sécurité + alertes ménage RDC</div>
+        </div>
+        <span class="phase-date">26 Mars 2026</span>
+        <span class="phase-tests">266 tests</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Gestion agent de sécurité RDC avec alertes ménage</li>
+            <li>12 tests ajoutés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 15F</div>
+          <div class="phase-name">Saisie des heures réelles par les ingénieurs</div>
+        </div>
+        <span class="phase-date">26 Mars 2026</span>
+        <span class="phase-tests">278 tests</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Heures réelles saisies par les ingénieurs</li>
+            <li>12 tests ajoutés · Déployé et vérifié</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sprint-heading">Sprint 4 — Équipement + Débrief (semaine du 13 avril)</div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
         <div class="phase-info">
           <div class="phase-id">PHASE 16</div>
-          <div class="phase-name">Équipements et inventaire matériel</div>
+          <div class="phase-name">Inventaire matériel simplifié</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">Terminé</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Liste des équipements par espace, statut opérationnel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 14B</div>
+          <div class="phase-name">Débrief amélioré (catégories, notes, issues techniques)</div>
+        </div>
+        <span class="phase-date">Terminé</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="phase-detail">
+        <div class="phase-desc">
+          <ul>
+            <li>Catégories de débrief, notes générales, issues techniques</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sprint-heading">Sprint 5 — Vues + Multi-studio (semaine du 20 avril)</div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 15G</div>
+          <div class="phase-name">Vue par ingénieur (planning inversé : personne → studios)</div>
+        </div>
+        <span class="phase-date">Terminé</span>
         <span class="chevron">▼</span>
       </div>
     </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 15H</div>
+          <div class="phase-name">Booking multi-studio + studios liés (1+2, 3+4)</div>
+        </div>
+        <span class="phase-date">Terminé</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 13C</div>
+          <div class="phase-name">Rôles simplifiés au démarrage (tout ADMIN d'abord)</div>
+        </div>
+        <span class="phase-date">Terminé</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="sprint-heading">Sprint 6 — Reporting (semaine du 27 avril)</div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 15I</div>
+          <div class="phase-name">Champs RDC spécifiques (configuration salle, matériel)</div>
+        </div>
+        <span class="phase-date">Terminé</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase completed" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-done">✓</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 17</div>
+          <div class="phase-name">Reporting, tableaux de bord + récapitulatifs hebdo</div>
+        </div>
+        <span class="phase-date">Terminé</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRÉ GO-LIVE -->
+  <div class="section fade-in">
+    <div class="section-title"><span class="section-num">03</span> Pré go-live (mai — obligatoire)</div>
 
     <div class="phase" onclick="togglePhase(this)">
       <div class="phase-header">
         <div class="phase-status status-next">→</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 17</div>
-          <div class="phase-name">Reporting et tableaux de bord avancés</div>
+          <div class="phase-id">PHASE 17B</div>
+          <div class="phase-name">Indisponibilités ponctuelles (congés, maintenance)</div>
         </div>
         <span class="phase-date">À venir</span>
         <span class="chevron">▼</span>
@@ -599,20 +889,18 @@
 
     <div class="phase" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-wait">⏳</div>
         <div class="phase-info">
           <div class="phase-id">PHASE 18</div>
           <div class="phase-name">Activation HubSpot CRM</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">En attente credentials</span>
         <span class="chevron">▼</span>
       </div>
       <div class="phase-detail">
         <div class="phase-desc">
           <ul>
-            <li>Credentials HubSpot fournis par Mahaut ✓</li>
-            <li>Toutes les fonctionnalités testées sur l'adaptateur de développement</li>
-            <li>Intégration CRM à lancer</li>
+            <li>Leslie doit fournir l'accès à la Private App HubSpot</li>
           </ul>
         </div>
       </div>
@@ -632,32 +920,101 @@
 
     <div class="phase" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-hold">⏸</div>
+        <div class="phase-status status-next">→</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 20</div>
-          <div class="phase-name">Portail artiste</div>
+          <div class="phase-id">PHASE 21</div>
+          <div class="phase-name">Import des réservations historiques (Easy Request)</div>
         </div>
-        <span class="phase-date">Reporté — à valider</span>
+        <span class="phase-date">À venir</span>
         <span class="chevron">▼</span>
-      </div>
-      <div class="phase-detail">
-        <div class="phase-desc">
-          <ul>
-            <li>Portail en libre-service pour les artistes</li>
-            <li>Reporté — à revalider avec Mahaut et Pierre</li>
-          </ul>
-        </div>
       </div>
     </div>
 
     <div class="phase" onclick="togglePhase(this)">
       <div class="phase-header">
-        <div class="phase-status status-next">→</div>
+        <div class="phase-status status-wait">⚠</div>
         <div class="phase-info">
-          <div class="phase-id">PHASE 21</div>
-          <div class="phase-name">Import des réservations historiques</div>
+          <div class="phase-id">PHASE 22</div>
+          <div class="phase-name">Conformité RGPD (consentement, effacement, export)</div>
         </div>
-        <span class="phase-date">À venir</span>
+        <span class="phase-date">Obligatoire</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-wait">⚠</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 23</div>
+          <div class="phase-name">Documentation et livrables contractuels</div>
+        </div>
+        <span class="phase-date">Obligatoire</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-wait">⚠</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 24</div>
+          <div class="phase-name">Sécurité headers + environnement de recette</div>
+        </div>
+        <span class="phase-date">Obligatoire</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPORTÉ -->
+  <div class="section fade-in">
+    <div class="section-title"><span class="section-num">04</span> Reporté (V2 — à valider)</div>
+
+    <div class="phase" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-hold">⏸</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 20</div>
+          <div class="phase-name">Portail artiste</div>
+        </div>
+        <span class="phase-date">Reporté</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-hold">⏸</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 25</div>
+          <div class="phase-name">Notifications WhatsApp</div>
+        </div>
+        <span class="phase-date">Reporté</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-hold">⏸</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 26</div>
+          <div class="phase-name">Templates pré-session par studio</div>
+        </div>
+        <span class="phase-date">Reporté</span>
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+
+    <div class="phase" onclick="togglePhase(this)">
+      <div class="phase-header">
+        <div class="phase-status status-hold">⏸</div>
+        <div class="phase-info">
+          <div class="phase-id">PHASE 27</div>
+          <div class="phase-name">Suivi présences hors session</div>
+        </div>
+        <span class="phase-date">Reporté</span>
         <span class="chevron">▼</span>
       </div>
     </div>
@@ -668,18 +1025,26 @@
     <div class="section-title"><span class="section-num">⚠</span> Points d'attention</div>
 
     <div class="alert">
-      <div class="alert-icon">✅</div>
+      <div class="alert-icon">🔑</div>
       <div class="alert-content">
-        <div class="alert-title">Credentials HubSpot — Reçus</div>
-        <div class="alert-text">Accès Private App HubSpot fournis par Mahaut Dufour. Phase 18 débloquée.</div>
+        <div class="alert-title">Credentials HubSpot — En attente</div>
+        <div class="alert-text">Leslie doit fournir l'accès à la Private App HubSpot pour activer la phase 18.</div>
       </div>
     </div>
 
     <div class="alert">
-      <div class="alert-icon">⏸</div>
+      <div class="alert-icon">📦</div>
       <div class="alert-content">
-        <div class="alert-title">Portail artiste (Phase 20)</div>
-        <div class="alert-text">Reporté — à revalider avec Mahaut Dufour et Pierre Guimard avant de relancer le développement.</div>
+        <div class="alert-title">Easy Request — Import historique (Phase 21)</div>
+        <div class="alert-text">Mahaut veut arrêter l'abonnement (100-120 €/mois). Import des réservations historiques prévu en Phase 21.</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="alert-icon">📅</div>
+      <div class="alert-content">
+        <div class="alert-title">Réunions hebdo</div>
+        <div class="alert-text">Lundi 14h avec Tom, Leslie, Mahaut, Stéphane — l'application doit être en état de démo chaque lundi.</div>
       </div>
     </div>
 
@@ -687,15 +1052,7 @@
       <div class="alert-icon">📈</div>
       <div class="alert-content">
         <div class="alert-title">Périmètre élargi</div>
-        <div class="alert-text">Le plan passe de 9 à 21 phases suite au RDV du 16 mars 2026. Scope significativement étendu.</div>
-      </div>
-    </div>
-
-    <div class="alert">
-      <div class="alert-icon">📦</div>
-      <div class="alert-content">
-        <div class="alert-title">Inventaire simplifié à intégrer dans Studio Planner</div>
-        <div class="alert-text">Concevoir la structure Studio Planner avec un module d'inventaire simplifié — liste des équipements par espace, statut opérationnel, sans gestion de stock avancée. Périmètre à valider avec l'équipe.</div>
+        <div class="alert-text">Suite aux appels du 16 et 23 mars, le plan passe à 33 phases (16 nouvelles exigences intégrées). Réorganisation en 7 sprints hebdomadaires.</div>
       </div>
     </div>
   </div>
