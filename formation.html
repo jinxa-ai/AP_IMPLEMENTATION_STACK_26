@@ -682,37 +682,8 @@
         <div class="module-header">
           <span class="module-num">04</span>
           <div class="module-info">
-            <div class="module-name">Réservations & Gestion des Sessions <span style="font-size:10px;background:rgba(62,207,184,0.15);color:var(--teal);padding:2px 8px;border-radius:3px;margin-left:6px;font-weight:600;letter-spacing:.05em">LIÉ AU PILOTAGE FINANCIER</span></div>
-            <div class="module-meta">Bookings · Conflits planning · Suivi paiement</div>
-          </div>
-          <span class="module-duration">2 jours</span>
-          <span class="chevron">▼</span>
-        </div>
-        <div class="module-body">
-          <ul>
-            <li>Créer une réservation : contact client, studio, type de session, dates/heures, durée calculée</li>
-            <li>Assigner un ingénieur son et un assistant depuis l'objet Staff</li>
-            <li>Types de sessions : recording, mixing, mastering, podcast, rehearsal</li>
-            <li>Gérer les récurrences : unique / hebdomadaire / mensuel</li>
-            <li>Détecter et résoudre les conflits de planning via les vues filtrées</li>
-            <li>Renseigner le tarif appliqué HT, la remise éventuelle, et le mode de facturation</li>
-            <li>Suivre le statut de paiement : en_attente → acompte → payé → retard → contentieux</li>
-            <li>Gérer les acomptes versés et calculer le solde restant automatiquement</li>
-            <li>Renseigner les besoins techniques et les fichiers de session (liens cloud)</li>
-            <li>Saisir la note de satisfaction et le feedback client post-session</li>
-            <li style="color:var(--teal);font-style:italic">→ Chaque réservation alimente directement la facturation : montant, statut paiement, acomptes (voir module 05)</li>
-          </ul>
-          <div class="module-objective">✦ À l'issue : gérer l'intégralité du cycle de vie d'une réservation, de la demande au paiement, sans rupture de saisie. Module enchaîné directement avec le pilotage financier.</div>
-          <div class="module-tags"><span class="tag">Bookings</span><span class="tag">Planning</span><span class="tag">Paiements</span><span class="tag">Facturation</span></div>
-        </div>
-      </div>
-
-      <div class="module" onclick="toggle(this)">
-        <div class="module-header">
-          <span class="module-num">05</span>
-          <div class="module-info">
-            <div class="module-name">Facturation & Pilotage Financier Opérationnel <span style="font-size:10px;background:rgba(62,207,184,0.15);color:var(--teal);padding:2px 8px;border-radius:3px;margin-left:6px;font-weight:600;letter-spacing:.05em">LUNDI POST-MIGRATION</span></div>
-            <div class="module-meta">Factures · Dépenses · KPI quotidiens · Suite directe du module 04</div>
+            <div class="module-name">Facturation & Pilotage Financier Opérationnel <span style="font-size:10px;background:rgba(62,207,184,0.15);color:var(--teal);padding:2px 8px;border-radius:3px;margin-left:6px;font-weight:600;letter-spacing:.05em">LUNDI POST-MIGRATION CA</span></div>
+            <div class="module-meta">Factures · Dépenses · KPI quotidiens</div>
           </div>
           <span class="module-duration">2 jours</span>
           <span class="chevron">▼</span>
@@ -730,6 +701,36 @@
           </ul>
           <div class="module-objective">✦ À l'issue : émettre des factures, saisir les dépenses, lire les KPI clés et gérer les impayés en autonomie.</div>
           <div class="module-tags"><span class="tag">Factures</span><span class="tag">Dépenses</span><span class="tag">KPI</span><span class="tag">Relances</span></div>
+        </div>
+      </div>
+
+      <div class="module" onclick="toggle(this)">
+        <div class="module-header">
+          <span class="module-num">05</span>
+          <div class="module-info">
+            <div class="module-name">Réservations & Gestion des Sessions <span style="font-size:10px;background:rgba(168,85,247,0.15);color:#a855f7;padding:2px 8px;border-radius:3px;margin-left:6px;font-weight:600;letter-spacing:.05em">POST-MIGRATION STUDIO PLANNER (TOM)</span></div>
+            <div class="module-meta">Bookings · Conflits planning · Suivi paiement · Suite directe du module 04</div>
+          </div>
+          <span class="module-duration">2 jours</span>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="module-body">
+          <ul>
+            <li>Créer une réservation : contact client, studio, type de session, dates/heures, durée calculée</li>
+            <li>Assigner un ingénieur son et un assistant depuis l'objet Staff</li>
+            <li>Types de sessions disponibles dans HubSpot : recording, mixing, mastering, production, podcast, rehearsal, other</li>
+            <li>Gérer les récurrences : unique / hebdomadaire / mensuel</li>
+            <li>Détecter et résoudre les conflits de planning via les vues filtrées</li>
+            <li>Renseigner le tarif appliqué HT, la remise éventuelle, et le mode de facturation</li>
+            <li>Suivre le statut de paiement : en_attente → acompte → payé → retard → contentieux</li>
+            <li>Gérer les acomptes versés et calculer le solde restant automatiquement</li>
+            <li>Renseigner les besoins techniques et les fichiers de session (liens cloud)</li>
+            <li>Saisir la note de satisfaction et le feedback client post-session</li>
+            <li style="color:#a855f7;font-style:italic">→ Cette phase est conditionnée par la livraison du Studio Planner développé par Tom : la création de bookings dans HubSpot doit être synchronisée avec l'app planning. Formation déclenchée une fois la migration Studio Planner terminée.</li>
+            <li style="color:var(--teal);font-style:italic">→ Chaque réservation alimente directement la facturation vue au module 04 : montant, statut paiement, acomptes</li>
+          </ul>
+          <div class="module-objective">✦ À l'issue : gérer l'intégralité du cycle de vie d'une réservation, de la demande au paiement, en lien direct avec le Studio Planner et la facturation.</div>
+          <div class="module-tags"><span class="tag">Bookings</span><span class="tag">Planning</span><span class="tag">Studio Planner</span><span class="tag">Migration Tom</span></div>
         </div>
       </div>
 
@@ -801,8 +802,8 @@
         Architecture · 0,5 j<br>
         Studios · 0,5 j<br>
         Création Deals · 1 j<br>
-        Réservations · 2 j<br>
         Facturation · 2 j<br>
+        Réservations · 2 j<br>
         Planning RH · 1 j<br>
         Automations · 1 j
       </div>
