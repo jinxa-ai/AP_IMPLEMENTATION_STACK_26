@@ -482,16 +482,19 @@
 
       <!-- Phase 5b — Planning Studio Planner -->
       <div class="gantt-phase-label">
-        <span class="phase-num">P5</span> Planning Opérationnel
+        <span class="phase-num">P5</span> Studio Planner (Tom) <span style="font-size:9px;color:#22c55e;font-weight:600;margin-left:6px">— 85% · 28/33 phases</span>
       </div>
       <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
-      <div class="gantt-cell"><div class="bar bar-tom">TR<small>Dev</small></div></div>
-      <div class="gantt-cell"><div class="bar bar-tom">TR<small>Booking</small></div></div>
-      <div class="gantt-cell"><div class="bar bar-tom">TR<small>Booking</small></div></div>
-      <div class="gantt-cell"><div class="bar bar-tom">TR<small>Tests</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom bar-done">TR<small>Sprint 1-3</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom bar-done">TR<small>Sprint 4-6</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom bar-done">TR<small>Sprint 7-10</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom bar-progress">TR<small>P17b/19</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom">TR<small>P21 Import</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom">TR<small>P22 RGPD</small></div></div>
+      <div class="gantt-cell"><div class="bar bar-tom">TR<small>P23/24</small></div></div>
       <div class="gantt-cell"><div class="bar bar-ops">SI<small>Valid.</small></div></div>
       <div class="gantt-cell"><div class="bar bar-ops">SI<small>Monitoring</small></div></div>
-      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
       <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
 
       <!-- Phase 5c — Workflows -->
@@ -598,6 +601,91 @@
     </div>
   </div>
 
+  </div>
+
+  <!-- STUDIO PLANNER STATUS -->
+  <div class="section fade-in">
+    <div class="section-title"><span class="section-num">02b</span> État d'avancement Studio Planner</div>
+    <div style="background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(168,85,247,0.04));border:1px solid rgba(124,58,237,0.3);border-radius:8px;padding:24px;margin-bottom:20px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+        <div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#a855f7;margin-bottom:4px">Application développée par Tom Randeau</div>
+          <div style="font-size:20px;font-weight:700;color:#fff">Studio Planner — 28/33 phases terminées</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:36px;font-weight:800;color:#a855f7;line-height:1;font-family:'Playfair Display',serif">85 %</div>
+          <div style="font-size:10px;color:#64748b;font-family:monospace">MàJ 9 avril 2026</div>
+        </div>
+      </div>
+
+      <div style="background:#1e1e24;border-radius:4px;height:10px;overflow:hidden;border:1px solid #334155;margin-bottom:20px">
+        <div style="width:85%;height:100%;border-radius:4px;background:linear-gradient(90deg,#7c3aed,#a855f7)"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:20px">
+        <div style="background:#0a0f1a;border:1px solid #22c55e44;border-radius:6px;padding:14px">
+          <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#22c55e;font-weight:600;margin-bottom:4px">Sprints terminés</div>
+          <div style="font-size:22px;font-weight:700;color:#fff">10 / 10</div>
+          <div style="font-size:11px;color:#64748b;margin-top:4px">Du 24 mars au 9 avril</div>
+        </div>
+        <div style="background:#0a0f1a;border:1px solid #3b82f644;border-radius:6px;padding:14px">
+          <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#3b82f6;font-weight:600;margin-bottom:4px">Tests automatisés</div>
+          <div style="font-size:22px;font-weight:700;color:#fff">413</div>
+          <div style="font-size:11px;color:#64748b;margin-top:4px">Vitest + Playwright E2E</div>
+        </div>
+        <div style="background:#0a0f1a;border:1px solid #f9731644;border-radius:6px;padding:14px">
+          <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:4px">Phases pré-go-live</div>
+          <div style="font-size:22px;font-weight:700;color:#fff">5 restantes</div>
+          <div style="font-size:11px;color:#64748b;margin-top:4px">17b · 18 · 19 · 21 · 22-24</div>
+        </div>
+        <div style="background:#0a0f1a;border:1px solid #a855f744;border-radius:6px;padding:14px">
+          <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#a855f7;font-weight:600;margin-bottom:4px">Architecture</div>
+          <div style="font-size:22px;font-weight:700;color:#fff">Multi-site</div>
+          <div style="font-size:11px;color:#64748b;margin-top:4px">AP18 + AP11 (Sony)</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div>
+          <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#22c55e;font-weight:600;margin-bottom:10px">✓ Sprints livrés (10)</div>
+          <ul style="font-size:12px;color:#94a3b8;line-height:1.8;list-style:none;padding:0;margin:0">
+            <li><span style="color:#22c55e">✓</span> S1-2 — Vue semaine + cartes UX (24 mars)</li>
+            <li><span style="color:#22c55e">✓</span> S3 — Sécurité RDC + heures réelles ingés (26 mars)</li>
+            <li><span style="color:#22c55e">✓</span> S4 — Inventaire + débrief (mi-avril)</li>
+            <li><span style="color:#22c55e">✓</span> S5 — Vue par ingénieur + multi-studio</li>
+            <li><span style="color:#22c55e">✓</span> S6 — Reporting + dashboards</li>
+            <li><span style="color:#22c55e">✓</span> S7 — Staff + timeline + workflow approbation (6 avril)</li>
+            <li><span style="color:#22c55e">✓</span> S8 — Vue 24h Tetris + 15 vrais profils staff (7 avril)</li>
+            <li><span style="color:#22c55e">✓</span> S9 — Fusion studios 1-2/3-4, modal enrichie (8 avril)</li>
+            <li><span style="color:#22c55e">✓</span> S10 — Refactor + bandeaux régisseurs + HubSpot (9 avril)</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:10px">⏳ Phases pré-go-live (mai)</div>
+          <ul style="font-size:12px;color:#94a3b8;line-height:1.8;list-style:none;padding:0;margin:0">
+            <li><span style="color:#f97316">→</span> Phase 17b — Indisponibilités ponctuelles</li>
+            <li><span style="color:#ef4444;font-weight:600">→</span> <span style="color:#ef4444">Phase 18 — HubSpot CRM (en attente credentials Leslie)</span></li>
+            <li><span style="color:#f97316">→</span> Phase 19 — Fiche artiste + historique client</li>
+            <li><span style="color:#f97316">→</span> Phase 21 — Import réservations Easy Request</li>
+            <li><span style="color:#f97316">→</span> Phase 22 — Conformité RGPD</li>
+            <li><span style="color:#f97316">→</span> Phase 23 — Documentation livrables</li>
+            <li><span style="color:#f97316">→</span> Phase 24 — Sécurité headers + recette</li>
+          </ul>
+          <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#64748b;font-weight:600;margin-top:14px;margin-bottom:8px">⏸ Reporté V2</div>
+          <div style="font-size:11px;color:#64748b;line-height:1.6">
+            P20 Portail artiste · P25 Notif WhatsApp · P26 Templates pré-session · P27 Suivi présences
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#0a0f1a;border:1px solid #ef444444;border-radius:6px;padding:12px 14px;margin-top:20px;font-size:12px;color:#94a3b8">
+        <span style="color:#ef4444;font-weight:600">⚠ Action Leslie :</span> fournir les credentials HubSpot Private App pour débloquer la Phase 18 (activation CRM dans Studio Planner).
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:11px;color:#64748b">
+        <span>📅 Démo hebdomadaire chaque <strong style="color:#a855f7">lundi 14h</strong> avec Tom + Leslie + Mahaut + Stéphane</span>
+      </div>
+    </div>
   </div>
 
   <!-- MILESTONES -->
