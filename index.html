@@ -539,10 +539,10 @@
   <div class="sprint" data-sprint="sprint-3">
     <div class="sprint-header">
       <span class="sprint-label" style="color:#f97316">Sprint 3</span>
-      <span class="sprint-title">Migration des données &amp; Intégrations</span>
-      <span class="sprint-count">4 tâches</span>
+      <span class="sprint-title">Migration des données, fichier CA &amp; Intégrations</span>
+      <span class="sprint-count">10 tâches</span>
     </div>
-    <p class="sprint-sub">Phase 6 — Mars-Avril 2026 · Nettoyage, import et intégrations outils existants</p>
+    <p class="sprint-sub">Phase 6 — Avril-Mai 2026 · Nettoyage, import contacts, migration du fichier CA vers HubSpot (vendredi 1er ou 8 mai), création des deals labels par Stéphane</p>
 
     <div class="task" style="border-left:3px solid #f97316">
       <div class="task-header" onclick="toggleTask(this)">
@@ -637,6 +637,159 @@
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Message WhatsApp → conversation visible dans la boîte de réception HubSpot</span></div>
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Email de réservation → contact + deal créés automatiquement</span></div>
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Documentation des intégrations livrée</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3-5 : Atelier validation statuts -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S3-5</span>
+            <span class="task-title">Atelier validation : statuts bookings, devis, BC et facturation</span>
+          </div>
+          <span class="badge badge-crm">CRM — Process</span> <span class="status status-wait">À planifier</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-si">Stéphane</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Second atelier de travail avec Stéphane pour valider les propositions de statuts faites dans le guide de migration CA : statuts bookings (10 étapes), statuts paiement, règles devis/BC par type de client, modes de facturation (à la session / groupée / forfait / régie). À organiser AVANT la migration du fichier CA pour figer les règles.</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Statuts bookings validés et configurés dans HubSpot</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Règles devis / BC documentées par profil client</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Mode de facturation choisi pour chaque deal récurrent</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3-6 : Grille tarifaire studios -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S3-6</span>
+            <span class="task-title">Définir la grille tarifaire studios (fixe vs variable)</span>
+          </div>
+          <span class="badge badge-crm">CRM — Configuration</span> <span class="status status-wait">À faire</span>
+          <span class="assignee assignee-si">Stéphane</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Stéphane redéfinit la grille tarifaire des studios. Les tarifs du fichier CA actuel ne sont plus à jour. Identifier quels studios ont un tarif horaire fixe (ex : Studio A à 105€/h) et lesquels restent négociables au cas par cas selon le client ou le type de session. Ces tarifs serviront à pré-remplir les bookings dans HubSpot.</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Liste des 6 studios avec leur statut tarifaire (fixe / variable)</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Tarifs fixes saisis sur les fiches Studio dans HubSpot</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Niveaux et tarifs des ingénieurs son confirmés (Senior, Junior)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3-7 : Création des deals labels -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S3-7</span>
+            <span class="task-title">Créer les deals labels actifs dans HubSpot (Stéphane prend la main)</span>
+          </div>
+          <span class="badge badge-crm">CRM — Deals</span> <span class="status status-wip">En cours</span>
+          <span class="assignee assignee-si">Stéphane</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Stéphane crée directement dans HubSpot les deals (contrats labels) en cours : Universal, Sony, Warner, Kobalt, Believe, etc. Un deal par accord commercial actif. Moins d'une dizaine de deals à créer. Bon exercice pour prendre l'outil en main avant la migration. Les bookings viendront se rattacher à ces deals — c'est structurant. Idéal : tous les deals créés d'ici vendredi prochain. Leslie reste joignable pour aider.</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Tous les deals labels actifs créés dans HubSpot avant le 18 avril</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Chaque deal est associé au bon contact + entreprise (label)</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Type de deal renseigné : Writing Camp, Forfait volume, Regular, 360, Extérieur</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Stage du pipeline correctement positionné</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3-8 : Lister les clients avec BC -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S3-8</span>
+            <span class="task-title">Identifier les clients exigeant un bon de commande</span>
+          </div>
+          <span class="badge badge-crm">CRM — Process</span> <span class="status status-wait">À faire</span>
+          <span class="assignee assignee-si">Stéphane</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Stéphane fait la liste, pour chaque client actif, de ceux qui exigent un bon de commande avant la facturation. Cette information sera renseignée sur la fiche du Deal (champ "BC requis") et déclenchera des alertes dans HubSpot si le BC manque. Probablement quasi-systématique pour les majors (Universal, Sony, Warner) et au cas par cas pour les autres.</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Liste des clients avec mention BC requis / non requis</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Champ "BC requis" renseigné sur les deals concernés</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Workflow d'alerte BC manquant configuré</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3-9 : Migration fichier CA -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S3-9</span>
+            <span class="task-title">Migration du fichier CA vers HubSpot (vendredi 1er ou 8 mai)</span>
+          </div>
+          <span class="badge badge-crm">CRM — Migration</span> <span class="status status-wait">Planifiée</span>
+          <span class="assignee assignee-lg">Leslie</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Migration du fichier Excel "CA AP 2026" vers HubSpot, opérée par Leslie le week-end pour ne pas perturber l'activité. Deux fenêtres possibles : vendredi 1er mai ou vendredi 8 mai, selon la date de réception de la base clientèle complète et de sa migration. Chaque ligne du fichier devient un Booking dans HubSpot, lié au contact, au studio, à l'ingénieur et au deal correspondant. Prérequis : tarifs studios définis (S3-6), deals créés (S3-7), statuts validés (S3-5).</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Toutes les sessions du fichier CA migrées en Bookings HubSpot</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Chaque booking lié au bon contact, studio, ingé et deal</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Statuts de paiement et de facturation à jour</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Vue Bookings reproduit la lecture du fichier CA</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3-10 : Passation et abandon du fichier CA -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S3-10</span>
+            <span class="task-title">Passation post-migration et abandon du fichier CA</span>
+          </div>
+          <span class="badge badge-crm">CRM — Formation</span> <span class="status status-wait">Planifiée</span>
+          <span class="assignee assignee-lg">Leslie</span> <span class="assignee assignee-si">Stéphane</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Le lundi suivant la migration, session de passation avec Stéphane et l'équipe : tour complet du nouveau fonctionnement (créer un booking, suivre une facture, retrouver ses infos, gérer un BC). À partir de ce jour, le fichier CA est abandonné. Tout passe dans HubSpot — pas de double saisie, sinon on ne s'en sort pas.</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Stéphane crée un booking complet en autonomie</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Stéphane suit le statut de paiement d'une facture</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Le fichier CA n'est plus mis à jour à partir de cette date</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Synchronisation Leslie ↔ Tom validée pour la création de bookings via le Studio Planner</span></div>
         </div>
       </div>
     </div>
