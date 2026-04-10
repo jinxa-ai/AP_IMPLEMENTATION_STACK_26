@@ -385,7 +385,7 @@
     <div class="sprint-header">
       <span class="sprint-label" style="color:#f97316">Sprint 2</span>
       <span class="sprint-title">Conception &amp; Paramétrage HubSpot</span>
-      <span class="sprint-count">4 tâches</span>
+      <span class="sprint-count">3 tâches</span>
     </div>
     <p class="sprint-sub">Phase 5 — Mars-Avril 2026 · Architecture CRM, workflows, planning opérationnel</p>
 
@@ -433,31 +433,6 @@
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">3 pipelines créés avec étapes et probabilités configurées</span></div>
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Propriétés obligatoires définies par étape</span></div>
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Vues Kanban fonctionnelles pour chaque pipeline</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="task" style="border-left:3px solid #f97316">
-      <div class="task-header" onclick="toggleTask(this)">
-        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="task-meta">
-          <div class="task-id-row">
-            <span class="task-id">S2-3</span>
-            <span class="task-title">Créer les workflows automatisés</span>
-          </div>
-          <span class="badge badge-crm">CRM — Workflows</span>
-          <span class="assignee assignee-lg">Leslie</span>
-        </div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="task-detail">
-        <p class="task-desc">Configurer les workflows d'automatisation : confirmation de réservation par email, rappels J-1 et J-3, relance post-session pour feedback, relance commerciale prospects inactifs, alertes internes (nouvelle demande événementielle, annulation).</p>
-        <div class="tests-block">
-          <div class="tests-label">✓ Tests d'acceptance</div>
-          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Workflow de confirmation réservation → email envoyé en &lt;1 min</span></div>
-          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Rappels J-1 et J-3 déclenchés automatiquement</span></div>
-          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Relance commerciale après 7j d'inactivité → email envoyé</span></div>
-          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Notification email interne sur nouvelle demande événementielle</span></div>
         </div>
       </div>
     </div>
@@ -1034,10 +1009,10 @@
   <div class="sprint" data-sprint="sprint-6">
     <div class="sprint-header">
       <span class="sprint-label" style="color:#f97316">Sprint 6</span>
-      <span class="sprint-title">Déploiement &amp; Mise en production</span>
-      <span class="sprint-count">3 tâches</span>
+      <span class="sprint-title">Déploiement, Workflows &amp; Mise en production</span>
+      <span class="sprint-count">4 tâches</span>
     </div>
-    <p class="sprint-sub">Phase 9 — Mai-Juin 2026 · Go-live, support rapproché, suivi incidents</p>
+    <p class="sprint-sub">Phase 9 — Mai-Juin 2026 · Go-live, workflows automatisés, support rapproché, suivi incidents</p>
 
     <div class="task" style="border-left:3px solid #f97316">
       <div class="task-header" onclick="toggleTask(this)">
@@ -1107,6 +1082,33 @@
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Tableau de suivi incidents renseigné quotidiennement J+1 à J+15</span></div>
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Incidents critiques résolus en &lt;4h</span></div>
           <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Taux d'adoption &gt;80% à J+15</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S6-4 : Workflows automatisés (déplacée depuis Sprint 2) -->
+    <div class="task" style="border-left:3px solid #f97316">
+      <div class="task-header" onclick="toggleTask(this)">
+        <button class="task-check" style="border-color:#334155" onclick="toggleDone(event,this,'#f97316')"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="task-meta">
+          <div class="task-id-row">
+            <span class="task-id">S6-4</span>
+            <span class="task-title">Créer les workflows automatisés</span>
+          </div>
+          <span class="badge badge-crm">CRM — Workflows</span>
+          <span class="assignee assignee-lg">Leslie</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="task-detail">
+        <p class="task-desc">Configurer les workflows d'automatisation après la mise en production : confirmation de réservation par email, rappels J-1 et J-3, relance post-session pour feedback, relance commerciale prospects inactifs, alertes internes (nouvelle demande, annulation, BC manquant). Mise en place une fois le go-live effectué pour ne pas envoyer de notifications sur des données de migration.</p>
+        <div class="tests-block">
+          <div class="tests-label">✓ Tests d'acceptance</div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Workflow de confirmation réservation → email envoyé en &lt;1 min</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Rappels J-1 et J-3 déclenchés automatiquement</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Relance commerciale après 7j d'inactivité → email envoyé</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Notification email interne sur nouvelle demande</span></div>
+          <div class="test-row"><span class="test-arrow">→</span><span class="test-text">Alerte automatique BC manquant sur deal facturable</span></div>
         </div>
       </div>
     </div>
